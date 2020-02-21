@@ -15,13 +15,15 @@ import { MatListModule } from '@angular/material/list';
 import { ProductsComponent } from './components/products/products.component';
 import { ServicesComponent } from './components/services/services.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideNavComponent,
     ProductsComponent,
-    ServicesComponent
+    ServicesComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
