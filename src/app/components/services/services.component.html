@@ -1,1 +1,14 @@
 <p>services works!</p>
+
+<table>
+    <tr>
+        <div *ngFor="let servicio of servicios">
+            <td >
+                {{servicio.id}}
+            </td>
+            <td >
+                {{servicio.descripcion}}
+            </td>
+        </div>
+    </tr>
+</table>
