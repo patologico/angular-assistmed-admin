@@ -1,12 +1,16 @@
-const ELEMENT_DATA: PeriodicElement[] = [
-    {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-    {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-    {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-    {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-    {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-    {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-  ];
+[
+  {"id": "1", "nombre": "Green Europa", "pais": "Argentina", "proveedor": "Sonico"},
+  {"id": "2", "nombre": "Black Europa", "pais": "Chile", "proveedor": "Portico"},
+  {"id": "3", "nombre": "Orange Europa", "pais": "Brazil", "proveedor": "Zonico"},
+  {"id": "4", "nombre": "Green Latam", "pais": "Peru", "proveedor": "Sonico"},
+  {"id": "5", "nombre": "Green Latam", "pais": "Peru", "proveedor": "Portico"},
+  {"id": "6", "nombre": "Green Latam", "pais": "Brazil", "proveedor": "Portico"},
+  {"id": "7", "nombre": "Green Latam", "pais": "Argentina", "proveedor": "Portico"},
+  {"id": "8", "nombre": "Green Africa", "pais": "Chile", "proveedor": "Zonico"},
+  {"id": "9", "nombre": "Green Africa", "pais": "Brazil", "proveedor": "Sonico"},
+  {"id": "10", "nombre": "Green Asia", "pais": "Brazil", "proveedor": "Sonico"},
+  {"id": "11", "nombre": "Green Africa", "pais": "Argentina", "proveedor": "Sonico"},
+  {"id": "12", "nombre": "Green Asia", "pais": "Argentina", "proveedor": "Zonico"},
+  {"id": "13", "nombre": "Green Asia", "pais": "Chile", "proveedor": "Sonico"},
+  {"id": "14", "nombre": "Green Global", "pais": "Peru", "proveedor": "Portico"}
+]

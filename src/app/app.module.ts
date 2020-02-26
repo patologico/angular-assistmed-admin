@@ -14,7 +14,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomepageComponent } from './components/homepage/homepage.component';
 
-import { DataApiService } from './services/data-api.service';
+
 
 @NgModule({
   declarations: [
@@ -30,8 +30,7 @@ import { DataApiService } from './services/data-api.service';
     MaterialModule,
     LayoutModule,
     AppRoutingModule,
-    HttpClientModule,
-    DataApiService
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

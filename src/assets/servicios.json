@@ -1,0 +1,13 @@
+[
+    {"id":"01", "descripcion": "Asistencia medica por accidente", "idioma": "espanol"},
+    {"id":"02", "descripcion": "Asistencia médica por enfermedad", "idioma": "espanol"},
+    {"id":"03", "descripcion": "Asistencia médica en caso de pre-existencia", "idioma": "espanol"},
+    {"id":"04", "descripcion": "Cobertura en caso de enfermedad por epidemia", "idioma": "espanol"},
+    {"id":"05", "descripcion": "Medicamentos", "idioma": "espanol"},
+    {"id":"06", "descripcion": "Odontología de urgencia", "idioma": "espanol"},
+    {"id":"07", "descripcion": "Gastos de hotel por convalecencia", "idioma": "espanol"},
+    {"id":"08", "descripcion": "Gastos por vuelo demorado (min 6hs.) o cancelado", "idioma": "espanol"},
+    {"id":"09", "descripcion": "Late arrival", "idioma": "espanol"},
+    {"id":"10", "descripcion": "Cancelacion de viaje multi causa", "idioma": "espanol"},
+    {"id":"11", "descripcion": "Sports", "idioma": "espanol"}
+]

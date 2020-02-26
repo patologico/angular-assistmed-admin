@@ -1,4 +1,4 @@
-export interface Service {
+export interface DataServiceInterface {
     id: string;
     descripcion: string;
     idioma: string;
