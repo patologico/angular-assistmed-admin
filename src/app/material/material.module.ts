@@ -8,6 +8,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule, MatChipsModule } from '@angular/material';
 import { MatSliderModule } from '@angular/material/slider';
 
+
 const MaterialComponents = [
   MatToolbarModule,
   MatSidenavModule,

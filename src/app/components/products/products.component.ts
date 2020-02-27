@@ -11,7 +11,7 @@ import { DataApiService } from '../../services/data-api.service';
 
 export class ProductsComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'nombre', 'pais', 'proveedor'];
+  displayedColumns: string[] = ['id', 'name', 'country', 'provider', 'actions'];
   data: any;
   dataSourceProductos: any;
 
