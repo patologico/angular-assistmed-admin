@@ -8,6 +8,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 
 const MaterialComponents = [
@@ -18,6 +19,7 @@ const MaterialComponents = [
   MatTableModule,
   MatSliderModule,
   MatButtonModule,
+  MatInputModule,
   MatFormFieldModule
 ];
 
@@ -32,7 +34,8 @@ const MaterialComponents = [
     MatListModule,
     MatSliderModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }
