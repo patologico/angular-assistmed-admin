@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {MatTableModule} from '@angular/material/table';
+// import {MatTableModule} from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
 import { DataApiService } from '../../services/data-api.service';
+import { from } from 'rxjs';
 
 
 @Component({
@@ -13,7 +15,7 @@ export class ProductsComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'country', 'provider', 'actions'];
   data: any;
-  dataSourceProductos: any;
+  dataSource: MatTableDataSource<any>;
 
   constructor(private DataApiService: DataApiService) { }
 
@@ -25,9 +27,18 @@ export class ProductsComponent implements OnInit {
     // Llamada Json duro Local:
     this.DataApiService.getProductsAll('./assets/productos.json').subscribe(
         response => {
-          this.dataSourceProductos = response;
-          console.log(this.dataSourceProductos);
+          this.data = response;
+          this.dataSource = new MatTableDataSource(this.data);
+          console.log(this.dataSource);
         }
     );
+  }
+
+  logData(row) {
+    console.log(row);
+  }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }

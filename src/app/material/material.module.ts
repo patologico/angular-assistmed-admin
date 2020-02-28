@@ -5,8 +5,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
-import { MatButtonModule, MatChipsModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 const MaterialComponents = [
@@ -17,8 +18,8 @@ const MaterialComponents = [
   MatTableModule,
   MatSliderModule,
   MatButtonModule,
-  MatChipsModule
-]
+  MatFormFieldModule
+];
 
 @NgModule({
   declarations: [],
@@ -31,7 +32,7 @@ const MaterialComponents = [
     MatListModule,
     MatSliderModule,
     MatButtonModule,
-    MatChipsModule
+    MatFormFieldModule
   ]
 })
 export class MaterialModule { }
