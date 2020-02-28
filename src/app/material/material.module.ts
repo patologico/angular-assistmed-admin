@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 const MaterialComponents = [
@@ -20,22 +22,26 @@ const MaterialComponents = [
   MatSliderModule,
   MatButtonModule,
   MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatSortModule,
+  MatPaginatorModule
 ];
 
 @NgModule({
   declarations: [],
   imports: [],
   exports: [
-    MatTableModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatTableModule,
     MatSliderModule,
     MatButtonModule,
+    MatInputModule,
     MatFormFieldModule,
-    MatInputModule
+    MatSortModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialModule { }
