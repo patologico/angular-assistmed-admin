@@ -13,6 +13,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ServicesComponent } from './components/services/services.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { NewProductComponent } from './components/products/new-product/new-product.component';
 
 
 
@@ -22,7 +23,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     SideNavComponent,
     ProductsComponent,
     ServicesComponent,
-    HomepageComponent
+    HomepageComponent,
+    NewProductComponent
   ],
   imports: [
     BrowserModule,
