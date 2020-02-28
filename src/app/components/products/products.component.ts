@@ -23,8 +23,7 @@ export class ProductsComponent implements OnInit {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   constructor(private DataApiService: DataApiService) { }
-
-  
+ 
   ngOnInit() {
     this.getBookingAll();
   }
@@ -35,7 +34,6 @@ export class ProductsComponent implements OnInit {
         response => {
           this.data = response;
           this.dataSource = new MatTableDataSource(this.data);
-          console.log(this.dataSource);
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
         }
