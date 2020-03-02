@@ -14,6 +14,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
 
 
 const MaterialComponents = [
@@ -30,7 +32,8 @@ const MaterialComponents = [
   MatPaginatorModule,
   MatCardModule,
   MatSelectModule,
-  MatDialogModule
+  MatDialogModule,
+  DragDropModule
 ];
 
 @NgModule({
@@ -50,7 +53,8 @@ const MaterialComponents = [
     MatPaginatorModule,
     MatCardModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    DragDropModule
   ]
 })
 export class MaterialModule { }

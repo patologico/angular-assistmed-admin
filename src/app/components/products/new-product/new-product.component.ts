@@ -18,7 +18,13 @@ export class NewProductComponent implements OnInit {
   }
 
   openServicesDialog() {
-    this.dialog.open(AddServicesComponent);
+    this.dialog.open(
+      AddServicesComponent,
+      {
+        width: '1200px',
+        data: {name: 'lala'}
+      }
+    );
   }
 
 }
