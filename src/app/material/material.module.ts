@@ -12,6 +12,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 const MaterialComponents = [
@@ -26,7 +28,9 @@ const MaterialComponents = [
   MatFormFieldModule,
   MatSortModule,
   MatPaginatorModule,
-  MatCardModule
+  MatCardModule,
+  MatSelectModule,
+  MatDialogModule
 ];
 
 @NgModule({
@@ -44,7 +48,9 @@ const MaterialComponents = [
     MatFormFieldModule,
     MatSortModule,
     MatPaginatorModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule,
+    MatDialogModule
   ]
 })
 export class MaterialModule { }

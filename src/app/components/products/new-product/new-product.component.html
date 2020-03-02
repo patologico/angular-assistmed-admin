@@ -1,1 +1,58 @@
-<p>new-product works!</p>
+<mat-sidenav-container
+    class="example-container" (backdropClick)="close('backdrop')" *ngIf="shouldRun">
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <p><button mat-button (click)="close('toggle button')">Toggle</button></p>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.open()">Open</button></p>
+    <p>Closed due to: {{reason}}</p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-card>
+    <p>Crear/Modificar Producto</p>
+    <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre del Producto:</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="Green Full Cobertura - Latam">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>Pais:</mat-label>
+            <mat-select [(value)]="selectedPais">
+              <mat-option value="argentina">
+                  Argentina
+              </mat-option>
+              <mat-option value="argentina">
+                  Brazil
+              </mat-option>
+              <mat-option value="argentina">
+                  Peru
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>Proveedor:</mat-label>
+            <mat-select [(value)]="selectedProveedor">
+              <mat-option value="uno">
+                  Proveedor uno
+              </mat-option>
+              <mat-option value="dos">
+                  Proveedor dos
+              </mat-option>
+              <mat-option value="tres">
+                  Proveedor tres
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div>
+        <button mat-button mat-raised-button (click)="openServicesDialog()">+ Agregar servicios</button>
+    </div>
+
+</mat-card>
+

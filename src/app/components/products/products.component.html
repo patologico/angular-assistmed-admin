@@ -4,7 +4,7 @@
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar Producto">
   </mat-form-field>
   
-  <button mat-button>+ crear Nuevo Producto</button>  
+  <a mat-list-item [routerLink]="['/modificar-producto']">crear Nuevo Producto</a> 
 </mat-card>
 
 

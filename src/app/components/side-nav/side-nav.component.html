@@ -9,8 +9,9 @@
       </a>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['productos']">productos</a>
-      <a mat-list-item [routerLink]="['servicios']">servicios</a>
+      <a mat-list-item [routerLink]="['productos']" routerLinkActive="active">productos</a>
+      <a mat-list-item [routerLink]="['modificar-producto']" routerLinkActive="active">Nuevo Producto</a>
+      <a mat-list-item [routerLink]="['servicios']" routerLinkActive="active">servicios</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog} from '@angular/material';
+import { AddServicesComponent } from '../add-services/add-services.component';
 
 @Component({
   selector: 'app-new-product',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewProductComponent implements OnInit {
 
-  constructor() { }
+  selectedPais = 'argentina';
+  selectedProveedor = 'uno';
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  openServicesDialog() {
+    this.dialog.open(AddServicesComponent);
   }
 
 }
