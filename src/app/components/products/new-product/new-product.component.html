@@ -55,7 +55,10 @@
             </mat-form-field>
         </div>
         <div>
-            <button mat-button mat-raised-button (click)="openServicesDialog()">+ Agregar servicios</button>
+            <button mat-button mat-flat-button color="primary" (click)="openServicesDialog()">
+                <mat-icon mat-list-icon>add_circle</mat-icon>
+                Agregar servicios
+            </button>
         </div>
     </mat-card-content>
 </mat-card>
