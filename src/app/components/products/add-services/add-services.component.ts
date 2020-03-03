@@ -12,18 +12,22 @@ export class AddServicesComponent implements OnInit {
 
   dataServices: any;
   todo = [
-    'Get to work',
-    'Pick up groceries',
-    'Go home',
-    'Fall asleep'
+    'Asistencia medica por accidente',
+    'Asistencia médica por enfermedad',
+    'Asistencia médica en caso de pre-existencia',
+    'Cobertura en caso de enfermedad por epidemia',
+    'Medicamentos',
+    'Odontología de urgencia',
+    'Gastos de hotel por convalecencia',
+    'Gastos por vuelo demorado (min 6hs.) o cancelado',
+    'Late arrival',
+    'Cancelacion de viaje multi causa',
+    'Asistencia médica en caso de pre-existencia',
+    'Sports'
   ];
 
   done = [
-    'Get up',
-    'Brush teeth',
-    'Take a shower',
-    'Check e-mail',
-    'Walk dog'
+
   ];
 
   drop(event: CdkDragDrop<string[]>) {
@@ -45,7 +49,7 @@ export class AddServicesComponent implements OnInit {
         this.dataServices = response;
         console.log(this.dataServices);
       }
-  ) ;
+    ) ;
   }
 
 

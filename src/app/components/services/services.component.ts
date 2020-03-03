@@ -11,7 +11,7 @@ import { DataApiService } from '../../services/data-api.service';
   styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent implements OnInit {
- 
+
   displayedColumns: string[] = ['id', 'description', 'language', 'actions'];
   data: any;
   dataSource: MatTableDataSource<any>;
@@ -19,7 +19,7 @@ export class ServicesComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
-  constructor(private DataApiService: DataApiService) { }
+  constructor(private dataApiService: DataApiService) { }
 
   ngOnInit() {
     this.getBookingAll();
@@ -27,7 +27,7 @@ export class ServicesComponent implements OnInit {
 
   getBookingAll() {
     // Llamada Json duro Local:
-    this.DataApiService.getProductsAll('./assets/servicios.json').subscribe(
+    this.dataApiService.getProductsAll('./assets/servicios.json').subscribe(
         response => {
           this.data = response;
           this.dataSource = new MatTableDataSource(this.data);

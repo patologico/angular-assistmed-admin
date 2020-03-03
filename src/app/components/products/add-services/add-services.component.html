@@ -1,9 +1,7 @@
-<h2 mat-dialog-title>titulo</h2>
-<mat-dialog-content>
-
-    <div class="example-container" style="border:1px solid pink">
-        <h2>To do</h2>
-      
+<h2 mat-dialog-title>Seleccione los Servicios para el Producto</h2>
+<mat-dialog-content style="min-height: 500px;">
+    <div class="example-container">
+        <h3>Servicios disponibles</h3>     
         <div
           cdkDropList
           #todoList="cdkDropList"
@@ -16,8 +14,7 @@
       </div>
       
       <div class="example-container">
-        <h2>Done</h2>
-      
+        <h3>Servicios seleccionados</h3>        
         <div
           cdkDropList
           #doneList="cdkDropList"
@@ -27,8 +24,9 @@
           (cdkDropListDropped)="drop($event)">
           <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
         </div>
-      </div>
-
-    
+      </div>   
 </mat-dialog-content>
-<mat-dialog-actions></mat-dialog-actions>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button mat-dialog-close cdkFocusInitial color="primary">Guardar</button>
+</div>
