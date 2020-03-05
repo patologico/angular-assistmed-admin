@@ -5,11 +5,11 @@ import { DataApiService } from '../../../services/data-api.service';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-new-product',
-  templateUrl: './new-product.component.html',
-  styleUrls: ['./new-product.component.scss']
+  selector: 'app-create-product',
+  templateUrl: './create-product.component.html',
+  styleUrls: ['./create-product.component.scss']
 })
-export class NewProductComponent implements OnInit {
+export class CreateProductComponent implements OnInit {
   data: any;
   dataSelectedServices: MatTableDataSource<any>;
   displayedColumns: string[] = ['id', 'description'];

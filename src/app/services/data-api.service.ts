@@ -21,9 +21,29 @@ export class DataApiService {
   //     );
   // }
 
+  // begins Product Services
+
   getProductsAll(url) {
     return this.httpClient.get(url);
   }
+
+  createProduct(url) {
+    return this.httpClient.get(url);
+  }
+
+  readProduct(url) {
+    return this.httpClient.get(url);
+  }
+
+  updateProduct(url) {
+    return this.httpClient.get(url);
+  }
+
+  deleteProduct(url) {
+    return this.httpClient.get(url);
+  }
+
+  // end Product Services
 
   getServicesAll(url) {
     return this.httpClient.get(url);

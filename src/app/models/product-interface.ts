@@ -1,6 +1,7 @@
 export interface DataProductInterface {
+    id: string;
     name: string;
-    position: number;
-    weight: number;
-    symbol: string;
+    country: string;
+    provider: string;
+    services: any;
 }

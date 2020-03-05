@@ -3,7 +3,7 @@
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar Producto">
   </mat-form-field>
-  <button mat-button mat-flat-button color="primary"  [routerLink]="['/modificar-producto']">
+  <button mat-button mat-flat-button color="primary"  [routerLink]="['/products/create']">
     <mat-icon mat-list-icon>add_circle</mat-icon>
     Nuevo Producto
   </button> 
@@ -43,6 +43,9 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> ACCIONES </th>
       <td mat-cell *matCellDef="let row">
+          <button mat-icon-button color="primary" (click)="openDialogCancel(row.token)" aria-label="cancel">
+              <mat-icon mat-list-icon>search</mat-icon>
+          </button>
           <button mat-icon-button color="primary" (click)="openDialogCancel(row.token)" aria-label="cancel">
               <mat-icon mat-list-icon>create</mat-icon>
           </button>

@@ -13,7 +13,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ServicesComponent } from './components/services/services.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { NewProductComponent } from './components/products/new-product/new-product.component';
+import { CreateProductComponent } from './components/products/create-product/create-product.component';
 import { AddServicesComponent } from './components/products/add-services/add-services.component';
 
 
@@ -26,7 +26,7 @@ import { AddServicesComponent } from './components/products/add-services/add-ser
     ProductsComponent,
     ServicesComponent,
     HomepageComponent,
-    NewProductComponent,
+    CreateProductComponent,
     AddServicesComponent
   ],
   entryComponents: [
