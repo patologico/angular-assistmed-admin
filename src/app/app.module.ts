@@ -15,6 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { CreateProductComponent } from './components/products/create-product/create-product.component';
 import { AddServicesComponent } from './components/products/add-services/add-services.component';
+import { ReadProductComponent } from './components/products/read-product/read-product.component';
+import { UpdateProductComponent } from './components/products/update-product/update-product.component';
+import { AddScopeComponent } from './components/products/add-scope/add-scope.component';
 
 
 
@@ -27,7 +30,10 @@ import { AddServicesComponent } from './components/products/add-services/add-ser
     ServicesComponent,
     HomepageComponent,
     CreateProductComponent,
-    AddServicesComponent
+    AddServicesComponent,
+    ReadProductComponent,
+    UpdateProductComponent,
+    AddScopeComponent
   ],
   entryComponents: [
     AddServicesComponent
