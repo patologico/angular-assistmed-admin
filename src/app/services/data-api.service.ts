@@ -49,4 +49,8 @@ export class DataApiService {
     return this.httpClient.get(url);
   }
 
+  getScopeAll(url) {
+    return this.httpClient.get(url);
+  }
+
 }

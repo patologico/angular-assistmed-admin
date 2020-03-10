@@ -1,1 +1,64 @@
-<p>add-scope works!</p>
+<h2 mat-dialog-title>Editar Alcande de Servicios</h2>
+<mat-dialog-content style="min-height: 500px;">
+    <div class="example-container">
+
+        <div>
+            <table>
+                <thead>
+                    <td>
+                        Servicio
+                    </td>
+                    <td>
+                        Moneda
+                    </td>
+                    <td>
+                        Valor
+                    </td>
+                    <td>
+                        Elemento x
+                    </td>
+                    <td>
+                        Proveedor
+                    </td>
+                </thead>
+                <tr *ngFor="let scope of dataScope; index as i">
+                    <td>
+                        {{scope.service}}
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <select matNativeControl>
+                              <option value="USD" >USD</option>
+                              <option value="ARS">ARS</option>
+                              <option value="CLP">CLP</option>
+                            </select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput value="">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput value="">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <select matNativeControl>
+                              <option value="volvo" >Proveedor Uno</option>
+                              <option value="saab">Proveedor Dos</option>
+                              <option value="mercedes">Proveedor Tres</option>
+                            </select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </div>
+      </div>   
+</mat-dialog-content>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button mat-dialog-close cdkFocusInitial color="primary">Guardar</button>
+</div>

@@ -1,4 +1,12 @@
 :host {
     padding: 30px;
     display: block;
+}
+
+.treintaporciento {
+  width: 30%;
+  display: inline-block;
+  input {
+    width: 100%;
   }
+}

@@ -36,7 +36,8 @@ import { AddScopeComponent } from './components/products/add-scope/add-scope.com
     AddScopeComponent
   ],
   entryComponents: [
-    AddServicesComponent
+    AddServicesComponent,
+    AddScopeComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 const MaterialComponents = [
   MatToolbarModule,
@@ -31,7 +34,9 @@ const MaterialComponents = [
   MatCardModule,
   MatSelectModule,
   MatDialogModule,
-  DragDropModule
+  DragDropModule,
+  MatGridListModule,
+  MatDividerModule
 ];
 
 @NgModule({
@@ -52,7 +57,9 @@ const MaterialComponents = [
     MatCardModule,
     MatSelectModule,
     MatDialogModule,
-    DragDropModule
+    DragDropModule,
+    MatGridListModule,
+    MatDividerModule
   ]
 })
 export class MaterialModule { }

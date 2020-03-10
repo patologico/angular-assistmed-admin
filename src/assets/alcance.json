@@ -1,0 +1,11 @@
+[
+  {"id": "1", "service": "Asistencia médica por enfermedad", "currency": "ARS", "value": "3156.00", "x": "datox", "provider": "cuantico"},
+  {"id": "2", "service": "Medicamentos", "currency": "ARS", "value": "6456.00", "x": "datox", "provider": "cuantico"},
+  {"id": "3", "service": "Asistencia médica en caso de pre-existencia", "currency": "ARS", "value": "954.00", "x": "datox", "provider": "sonico"},
+  {"id": "4", "service": "Odontología de urgencia", "currency": "USD", "value": "8953.00", "x": "datox", "provider": "sonico"},
+  {"id": "5", "service": "Gastos por vuelo demorado (min 6hs.) o cancelado", "currency": "ARS", "value": "9562.00", "x": "datox", "provider": "cuantico"},
+  {"id": "6", "service": "Late arrival", "currency": "ARS", "value": "5983.00", "x": "datox", "provider": "cuantico"},
+  {"id": "7", "service": "Cancelacion de viaje multi causa", "currency": "USD", "value": "143.00", "x": "datox", "provider": "sonico"},
+  {"id": "8", "service": "Sports", "currency": "ARS", "value": "561.00", "x": "datox", "provider": "cuantico"},
+  {"id": "9", "service": "Asistencia medica por accidente", "currency": "PES", "value": "8213.00", "x": "datox", "provider": "cuantico"}
+]
