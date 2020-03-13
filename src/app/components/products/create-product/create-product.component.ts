@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+
 import { MatDialog} from '@angular/material';
 import { AddServicesComponent } from '../add-services/add-services.component';
 import { AddScopeComponent } from '../add-scope/add-scope.component';
 import { DataApiService } from '../../../services/data-api.service';
-import { MatTableDataSource } from '@angular/material/table';
-
 
 @Component({
   selector: 'app-create-product',
@@ -12,52 +12,26 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./create-product.component.scss']
 })
 export class CreateProductComponent implements OnInit {
-  data: any;
-  dataScope: any;
-  dataSelectedServices: MatTableDataSource<any>;
-  dataSelectedScope: MatTableDataSource<any>;
-  displayedServicesColumns: string[] = ['id', 'description'];
-  displayedScopeColumns: string[] = ['service', 'currency', 'value', 'x', 'provider'];
-  selectedPais = 'argentina';
-  selectedProveedor = 'uno';
 
-  constructor(public dialog: MatDialog, private dataApiService: DataApiService) { }
+  isLinear = false; 
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+
+  constructor(
+    public dialog: MatDialog,
+    private dataApiService: DataApiService,
+    private _formBuilder: FormBuilder
+  ){}
 
   ngOnInit() {
-    this.dataApiService.getProductsAll('./assets/servicios.json').subscribe(
-      response => {
-        this.data = response;
-        this.dataSelectedServices = new MatTableDataSource(this.data);
-        console.log(this.dataSelectedServices);
-      }
-    ) ;
-    this.dataApiService.getScopeAll('./assets/alcance.json').subscribe(
-      response => {
-        this.dataScope = response;
-        this.dataSelectedScope = new MatTableDataSource(this.dataScope);
-        console.log(this.dataSelectedScope);
-      }
-    ) ;
-
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
   }
 
-  openServicesDialog() {
-    this.dialog.open(
-      AddServicesComponent,
-      {
-        width: '1200px',
-        data: {name: 'lala'}
-      }
-    );
-  }
-  openScopeDialog() {
-    this.dialog.open(
-      AddScopeComponent,
-      {
-        width: '1200px',
-        data: {name: 'lala'}
-      }
-    );
-  }
+
 
 }

@@ -17,6 +17,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 const MaterialComponents = [
@@ -36,7 +37,8 @@ const MaterialComponents = [
   MatDialogModule,
   DragDropModule,
   MatGridListModule,
-  MatDividerModule
+  MatDividerModule,
+  MatStepperModule
 ];
 
 @NgModule({
@@ -59,7 +61,8 @@ const MaterialComponents = [
     MatDialogModule,
     DragDropModule,
     MatGridListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }
