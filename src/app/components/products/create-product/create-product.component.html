@@ -3,18 +3,55 @@
         <mat-card-title>Crear Producto</mat-card-title>
     </mat-card-header>
 
-    <!-- beggings CARD Container-->
+    <!-- start CARD Container-->
     <mat-card-content>
         <div style="width: 100%;">
 
-        <!-- beggins STEPPER Component -->
+        <!-- start STEPPER Component -->
         <mat-horizontal-stepper [linear]="isLinear" #stepper>
             <mat-step [stepControl]="firstFormGroup">
               <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Fill out your name</ng-template>
-                <mat-form-field>
-                  <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-                </mat-form-field>
+                <!-- start FORM 1 / Product Data -->
+                  <div class="treintaporciento">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Nombre del Producto:</mat-label>
+                        <input matInput [formControl]="nameProductField" placeholder="Ex. Pizza" value="Green Full Cobertura - Latam">
+                      </mat-form-field>
+                  </div>
+                  <div class="treintaporciento">
+                      <mat-form-field class="example-full-width">
+                          <mat-label>Pais:</mat-label>
+                          <mat-select [(value)]="selectedPais">
+                          <mat-option value="argentina">
+                              Argentina
+                          </mat-option>
+                          <mat-option value="argentina">
+                              Brazil
+                          </mat-option>
+                          <mat-option value="argentina">
+                              Peru
+                          </mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                  </div>
+                  <div class="treintaporciento">
+                      <mat-form-field class="example-full-width">
+                          <mat-label>Proveedor:</mat-label>
+                          <mat-select [(value)]="selectedProveedor">
+                          <mat-option value="uno">
+                              Proveedor uno
+                          </mat-option>
+                          <mat-option value="dos">
+                              Proveedor dos
+                          </mat-option>
+                          <mat-option value="tres">
+                              Proveedor tres
+                          </mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                  </div>
+                <!-- end FORM 1 / Product Data -->
                 <div>
                   <button mat-button matStepperNext>Next</button>
                 </div>

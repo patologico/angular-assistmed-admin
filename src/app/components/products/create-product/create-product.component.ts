@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 import { MatDialog} from '@angular/material';
 import { AddServicesComponent } from '../add-services/add-services.component';
@@ -13,15 +13,24 @@ import { DataApiService } from '../../../services/data-api.service';
 })
 export class CreateProductComponent implements OnInit {
 
-  isLinear = false; 
+  isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+
+  nameProductField: FormControl;
 
   constructor(
     public dialog: MatDialog,
     private dataApiService: DataApiService,
     private _formBuilder: FormBuilder
-  ){}
+  ){
+    this.nameProductField = new FormControl();
+    this.nameProductField.valueChanges.subscribe(
+      value => {
+        console.log(value)
+      }
+    );
+  }
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
