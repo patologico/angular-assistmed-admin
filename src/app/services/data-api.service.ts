@@ -5,13 +5,32 @@ import { retry, catchError } from 'rxjs/operators';
 import { DataServiceInterface } from '../models/service-interface';
 import { DataProductInterface } from '../models/product-interface';
 
+// for Firestore
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { map } from 'rxjs/operators';
+
+// interface for ID from firebase Products
+export interface ProductsId extends DataProductInterface { id: string; }
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class DataApiService {
-  constructor(private httpClient: HttpClient) { }
+
+  private productsCollection: AngularFirestoreCollection<ProductsId>;
+  products: Observable<ProductsId>;
+
+  constructor(private httpClient: HttpClient, private readonly afs: AngularFirestore) {
+    this.productsCollection = afs.collection<ProductsId>('products');
+    this.products = this.productsCollection.snapshotChanges().pipe(
+      map(actions => actions.map( a => {
+        const data = a.payload.doc.data() as ProductsId;
+        const id = a.payload.doc.id;
+        return { id, ...data};
+      }))
+    );
+  }
 
   // getProductsAll(datos: object): Observable<any[]> {
   //   return this.httpClient.post<any[]>(this.urlApiAdmin + '/get-booking/all', datos)
