@@ -44,7 +44,7 @@ export class AddServicesComponent implements OnInit {
   constructor(private dataApiService: DataApiService) { }
 
   ngOnInit() {
-    this.dataApiService.getProductsAll('./assets/servicios.json').subscribe(
+    this.dataApiService.getProductsAll().subscribe(
       response => {
         this.dataServices = response;
         console.log(this.dataServices);

@@ -27,7 +27,7 @@ export class ServicesComponent implements OnInit {
 
   getBookingAll() {
     // Llamada Json duro Local:
-    this.dataApiService.getProductsAll('./assets/servicios.json').subscribe(
+    this.dataApiService.getProductsAll().subscribe(
         response => {
           this.data = response;
           this.dataSource = new MatTableDataSource(this.data);

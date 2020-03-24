@@ -23,14 +23,14 @@ export class ProductsComponent implements OnInit {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   constructor(private DataApiService: DataApiService) { }
- 
+
   ngOnInit() {
     this.getBookingAll();
   }
 
   getBookingAll() {
     // Llamada Json duro Local:
-    this.DataApiService.getProductsAll('./assets/productos.json').subscribe(
+    this.DataApiService.getProductsAll().subscribe(
         response => {
           this.data = response;
           this.dataSource = new MatTableDataSource(this.data);

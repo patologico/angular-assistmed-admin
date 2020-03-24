@@ -20,8 +20,10 @@ import { ReadProductComponent } from './components/products/read-product/read-pr
 import { UpdateProductComponent } from './components/products/update-product/update-product.component';
 import { AddScopeComponent } from './components/products/add-scope/add-scope.component';
 
-
-
+// Firebase
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { AddScopeComponent } from './components/products/add-scope/add-scope.com
     LayoutModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.configFirebase)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,7 +24,7 @@ export class UpdateProductComponent implements OnInit {
   constructor(public dialog: MatDialog, private dataApiService: DataApiService) { }
 
   ngOnInit() {
-    this.dataApiService.getProductsAll('./assets/servicios.json').subscribe(
+    this.dataApiService.getProductsAll().subscribe(
       response => {
         this.data = response;
         this.dataSelectedServices = new MatTableDataSource(this.data);

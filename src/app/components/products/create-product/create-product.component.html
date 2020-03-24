@@ -16,13 +16,13 @@
                   <div class="treintaporciento">
                     <mat-form-field class="example-full-width">
                         <mat-label>Nombre del Producto:</mat-label>
-                        <input matInput [formControl]="nameProductField" placeholder="Ex. Pizza" value="Green Full Cobertura - Latam">
+                        <input matInput formControlName="nameProductField"  placeholder="" value="" required>
                       </mat-form-field>
                   </div>
                   <div class="treintaporciento">
                       <mat-form-field class="example-full-width">
                           <mat-label>Pais:</mat-label>
-                          <mat-select [(value)]="selectedPais">
+                          <mat-select formControlName="countryProductField" >
                           <mat-option value="argentina">
                               Argentina
                           </mat-option>
@@ -38,7 +38,7 @@
                   <div class="treintaporciento">
                       <mat-form-field class="example-full-width">
                           <mat-label>Proveedor:</mat-label>
-                          <mat-select [(value)]="selectedProveedor">
+                          <mat-select formControlName="providerProductField">
                           <mat-option value="uno">
                               Proveedor uno
                           </mat-option>

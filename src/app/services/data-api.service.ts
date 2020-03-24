@@ -18,18 +18,22 @@ export interface ProductsId extends DataProductInterface { id: string; }
 
 export class DataApiService {
 
-  private productsCollection: AngularFirestoreCollection<ProductsId>;
-  products: Observable<ProductsId>;
+  private productsCollection: AngularFirestoreCollection<DataProductInterface>;
+  products: Observable<DataProductInterface[]>;
 
   constructor(private httpClient: HttpClient, private readonly afs: AngularFirestore) {
-    this.productsCollection = afs.collection<ProductsId>('products');
+    this.productsCollection = afs.collection<DataProductInterface>('products');
     this.products = this.productsCollection.snapshotChanges().pipe(
       map(actions => actions.map( a => {
-        const data = a.payload.doc.data() as ProductsId;
+        const data = a.payload.doc.data() as DataProductInterface;
         const id = a.payload.doc.id;
         return { id, ...data};
       }))
     );
+  }
+
+  getProductsAll() {
+    return this.products;
   }
 
   // getProductsAll(datos: object): Observable<any[]> {
@@ -42,9 +46,9 @@ export class DataApiService {
 
   // begins Product Services
 
-  getProductsAll(url) {
-    return this.httpClient.get(url);
-  }
+  // getProductsAll(url) {
+  //   return this.httpClient.get(url);
+  // }
 
   createProduct(url) {
     return this.httpClient.get(url);

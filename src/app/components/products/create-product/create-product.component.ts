@@ -22,7 +22,7 @@ export class CreateProductComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     private dataApiService: DataApiService,
-    private _formBuilder: FormBuilder
+    private formBuilder: FormBuilder
   ){
     this.nameProductField = new FormControl();
     this.nameProductField.valueChanges.subscribe(
@@ -30,17 +30,23 @@ export class CreateProductComponent implements OnInit {
         console.log(value)
       }
     );
+    this.buildForm();
   }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
+    this.dataApiService.getProductsAll().subscribe( res => console.log(res));
   }
 
-
+  private buildForm() {
+    this.firstFormGroup = this.formBuilder.group({
+      nameProductField: ['', Validators.required],
+      countryProductField: ['', Validators.required],
+      providerProductField: ['', Validators.required]
+    });
+    this.secondFormGroup = this.formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
+    console.log('ejecutado FormBulder');
+  }
 
 }
