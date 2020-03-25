@@ -11,55 +11,69 @@
         <mat-horizontal-stepper [linear]="isLinear" #stepper>
             <mat-step [stepControl]="firstFormGroup">
               <form [formGroup]="firstFormGroup">
-                <ng-template matStepLabel>Fill out your name</ng-template>
+                <ng-template matStepLabel>Crear Producto</ng-template>
                 <!-- start FORM 1 / Product Data -->
-                  <div class="treintaporciento">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Nombre del Producto:</mat-label>
-                        <input matInput formControlName="nameProductField"  placeholder="" value="" required>
-                      </mat-form-field>
-                  </div>
-                  <div class="treintaporciento">
-                      <mat-form-field class="example-full-width">
-                          <mat-label>Pais:</mat-label>
-                          <mat-select formControlName="countryProductField" >
-                          <mat-option value="argentina">
-                              Argentina
-                          </mat-option>
-                          <mat-option value="argentina">
-                              Brazil
-                          </mat-option>
-                          <mat-option value="argentina">
-                              Peru
-                          </mat-option>
-                          </mat-select>
-                      </mat-form-field>
-                  </div>
-                  <div class="treintaporciento">
-                      <mat-form-field class="example-full-width">
-                          <mat-label>Proveedor:</mat-label>
-                          <mat-select formControlName="providerProductField">
-                          <mat-option value="uno">
-                              Proveedor uno
-                          </mat-option>
-                          <mat-option value="dos">
-                              Proveedor dos
-                          </mat-option>
-                          <mat-option value="tres">
-                              Proveedor tres
-                          </mat-option>
-                          </mat-select>
-                      </mat-form-field>
+                  <div class="row around-xs">
+                    <div class="col-xs-4">
+                      <div class="box">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Nombre del Producto:</mat-label>
+                            <input matInput formControlName="nameProductField"  placeholder="" value="" required>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="box">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Pais:</mat-label>
+                            <mat-select formControlName="countryProductField" >
+                            <mat-option value="argentina">
+                                Argentina
+                            </mat-option>
+                            <mat-option value="argentina">
+                                Brazil
+                            </mat-option>
+                            <mat-option value="argentina">
+                                Peru
+                            </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="box">
+                        <mat-form-field class="example-full-width">
+                              <mat-label>Proveedor:</mat-label>
+                              <mat-select formControlName="providerProductField">
+                              <mat-option value="uno">
+                                  Proveedor uno
+                              </mat-option>
+                              <mat-option value="dos">
+                                  Proveedor dos
+                              </mat-option>
+                              <mat-option value="tres">
+                                  Proveedor tres
+                              </mat-option>
+                              </mat-select>
+                          </mat-form-field>
+                      </div>
+                    </div>
                   </div>
                 <!-- end FORM 1 / Product Data -->
-                <div>
-                  <button mat-button matStepperNext>Next</button>
+
+                <div class="row end-xs">
+                  <div class="col-xs-6">
+                      <div class="box">
+                        <button mat-button mat-mat-flat-button matStepperNext color="primary">Next</button>
+                      </div>
+                  </div>
                 </div>
+
               </form>
             </mat-step>
             <mat-step [stepControl]="secondFormGroup">
               <form [formGroup]="secondFormGroup">
-                <ng-template matStepLabel>Fill out your address</ng-template>
+                <ng-template matStepLabel>Agregar Servicios</ng-template>
                 <mat-form-field>
                   <input matInput placeholder="Address" formControlName="secondCtrl" required>
                 </mat-form-field>
